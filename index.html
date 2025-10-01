@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Analisador de Boletim</title>
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet" />
+        <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              "background-light": "#f3f4f6",
+              "background-dark": "#1f2937",
+              "text-light": "#111827",
+              "text-dark": "#f9fafb",
+              "surface-light": "#ffffff",
+              "surface-dark": "#374151",
+              "border-light": "#d1d5db",
+              "border-dark": "#4b5563"
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+        <script src="script.js"></script>
+        <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    </head>
+    <body
+        class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+        <div class="flex flex-col min-h-screen">
+            <header
+                class="p-4 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark shadow-sm">
+                <div
+                    class="container mx-auto flex justify-between items-center">
+                    <h1 class="text-xl font-bold text-primary">Calculadora
+                        SUAP</h1>
+                    <p class="text-sm">Feito por Raul César de Oliveira (IFSP -
+                        BARRETOS)</p>
+                </div>
+            </header>
+            <main
+                class="flex-grow container mx-auto px-4 py-8 flex flex-col items-center justify-center">
+                <div
+                    class="w-full max-w-2xl bg-surface-light dark:bg-surface-dark p-8 rounded-lg shadow-lg border border-border-light dark:border-border-dark">
+                    <div class="text-center mb-6">
+                        <h2
+                            class="text-2xl font-semibold mb-2 text-text-light dark:text-text-dark">COLE
+                            SEU BOLETIM AQUI:</h2>
+                    </div>
+                    <div class="relative">
+                        <textarea
+                            class="w-full p-4 border border-border-light dark:border-border-dark rounded-md focus:ring-2 focus:ring-primary focus:border-transparent bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark placeholder-gray-400 dark:placeholder-gray-500"
+                            id="boletim-input"
+                            placeholder="Aguardando o seu boletim..."
+                            rows="12"></textarea>
+                        <div class="absolute bottom-3 right-3">
+                            <button
+                                class="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors flex items-center gap-2"
+                                onclick="analisarBoletim()">
+                                <span
+                                    class="material-icons text-lg">analytics</span>
+                                Analisar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 space-y-2">
+                        <div
+                            class="p-4 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-md">
+                            <p class="text-text-light dark:text-text-dark"
+                                id="placeholder1">O resultado aparecerá aqui</p>
+                        </div>
+                        <div
+                            class="p-4 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-md">
+                            <p class="text-text-light dark:text-text-dark"
+                                id="placeholder2">O resultado aparecerá aqui</p>
+                        </div>
+                        <div
+                            class="p-4 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-md">
+                            <p class="text-text-light dark:text-text-dark"
+                                id="placeholder3">O resultado aparecerá aqui</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </body>
+</html>
